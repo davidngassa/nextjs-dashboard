@@ -10,6 +10,11 @@ import {
 import { Button } from '@/app/ui/button';
 import {createInvoice, State} from '@/app/lib/actions';
 import {useActionState} from 'react';
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: 'Create',
+};
 
 export default function Form({ customers }: { customers: CustomerField[] }) {
   const initialState : State = {message: null, errors:{}};
